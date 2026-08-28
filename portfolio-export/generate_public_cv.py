@@ -170,7 +170,7 @@ def build_public_cv(destination: Path) -> None:
     contact = cv.get("contact", {})
     contact_lines = [
         contact.get("location"), contact.get("phone"), contact.get("email"),
-        contact.get("website"), contact.get("linkedin"), contact.get("instagram"),
+        contact.get("website"), contact.get("linkedin"), contact.get("github"), contact.get("instagram"),
     ]
     header = Table(
         [[

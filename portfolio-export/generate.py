@@ -766,10 +766,11 @@ def build_portfolio_html(
         "phone": REPO_ROOT / "assets" / "icons" / "phone.svg",
         "email": REPO_ROOT / "assets" / "icons" / "email.svg",
         "linkedin": REPO_ROOT / "assets" / "icons" / "linkedin.svg",
+        "github": REPO_ROOT / "assets" / "icons" / "github.svg",
         "instagram": REPO_ROOT / "assets" / "icons" / "instagram.svg",
         "location": REPO_ROOT / "assets" / "icons" / "location.svg",
     }
-    for key in ("phone", "email", "website", "linkedin", "instagram", "location"):
+    for key in ("phone", "email", "website", "linkedin", "github", "instagram", "location"):
         value = clean_text(cv.get("contact", {}).get(key, ""))
         if not value:
             continue
@@ -1275,7 +1276,7 @@ def render_cv(
     draw_label(pdf, "Contact", right_x, y_right)
     y_right -= 20
     contact = cv.get("contact", {})
-    for key in ("email", "website", "linkedin", "instagram"):
+    for key in ("email", "website", "linkedin", "github", "instagram"):
         value = contact.get(key)
         if not value:
             continue
