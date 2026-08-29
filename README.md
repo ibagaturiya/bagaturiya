@@ -55,11 +55,18 @@ projects/0062-housing-tool/
 ├── skill.txt
 ├── icon.svg|png|jpg|jpeg|gif
 ├── trailer.mp4|gif|txt
+├── redirect.txt
 └── image1.jpg, image2.png, ...
 ```
 
 Numbered media may also use names such as `0001_plan.png`. Supported project
 media include JPG, JPEG, PNG, GIF, MP4, MP3, PDF, and text links.
+
+A `redirect.txt` containing a single URL makes the generated project page
+auto-redirect there (instant `<meta http-equiv="refresh">` plus a visible
+fallback link) instead of acting as a normal gallery page — use this for
+projects that live on an external site. The project still gets a normal
+grid card, icon, and prev/next navigation like any other project.
 
 ## Add or update a published project
 

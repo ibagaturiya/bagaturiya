@@ -17,8 +17,15 @@ ICON
 	.png
 	.jpeg
 	.gif
-	
+
 	#should be squared
+
+REDIRECT
+	.txt {containing a single URL}
+
+	#makes the generated project page instantly auto-redirect to that URL
+	#instead of showing the normal gallery; the grid card, icon and
+	#prev/next nav still work like any other project
 
 IMAGE[number]
 	.png

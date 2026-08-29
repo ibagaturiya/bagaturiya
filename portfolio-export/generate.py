@@ -1022,7 +1022,7 @@ def build_portfolio_html(
     return (template
             .replace("{{DOCUMENT_TITLE}}", html.escape(title))
             .replace("{{PORTFOLIO_STYLES}}", styles)
-            .replace("{{FAVICON_URL}}", portfolio_asset_url(REPO_ROOT / "assets" / "favicon" / "favicon.svg", html_destination))
+            .replace("{{FAVICON_URL}}", portfolio_asset_url(REPO_ROOT / "assets" / "favicon" / "favicon.png", html_destination))
             .replace("{{EXPORT_ID}}", html.escape(export_id))
             .replace("{{COVER}}", cover)
             .replace("{{CONTENTS}}", cv_page_one + cv_page_two + contents)

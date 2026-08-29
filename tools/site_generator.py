@@ -286,7 +286,7 @@ def generate_index_html(projects):
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ivan Bagaturiya</title>
-    <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon/favicon.png" type="image/png" />
     <link rel="stylesheet" href="assets/css/index.css" />
   </head>
   <body>
@@ -344,7 +344,7 @@ def contact_href(key, value):
         return f"mailto:{value}"
     if key == "phone":
         return f"tel:{re.sub(r'[^+0-9]', '', value)}"
-    if key in {"website", "linkedin", "instagram"}:
+    if key in {"website", "linkedin", "github", "instagram"}:
         return value if value.startswith(("http://", "https://")) else f"https://{value}"
     return ""
 
@@ -358,6 +358,8 @@ def contact_icon_src(key):
         return "../assets/icons/phone.svg"
     if key == "linkedin":
         return "../assets/icons/linkedin.svg"
+    if key == "github":
+        return "../assets/icons/github.svg"
     if key == "instagram":
         return "../assets/icons/instagram.svg"
     return ""
@@ -393,15 +395,15 @@ def generate_about_html(project_folder):
 
     contact_rows = []
     icon_links = []
-    for key in ("phone", "email", "linkedin", "instagram", "location", "website"):
+    for key in ("phone", "email", "linkedin", "github", "instagram", "location", "website"):
         value = cv.get("contact", {}).get(key)
         if not value:
             continue
         if key == "website":
             continue
         href = contact_href(key, value)
-        if key in {"email", "phone", "linkedin", "instagram", "location"}:
-            external = ' target="_blank" rel="noopener noreferrer"' if key in {"linkedin", "instagram"} else ""
+        if key in {"email", "phone", "linkedin", "github", "instagram", "location"}:
+            external = ' target="_blank" rel="noopener noreferrer"' if key in {"linkedin", "github", "instagram"} else ""
             icon_src = contact_icon_src(key)
             if key == "location":
                 icon_links.append(
@@ -669,6 +671,13 @@ def main():
             )
         else:
             html = generate_project_html(project_id, folder, title, desc, icon, media, next_project, prev_project, projects)
+        redirect_path = safe_join(folder_path, "redirect.txt")
+        if os.path.exists(redirect_path):
+            redirect_url = read_file(redirect_path)
+            meta_tag = f'<meta http-equiv="refresh" content="0; url={escape(redirect_url, quote=True)}" />'
+            html = html.replace("</head>", f'{meta_tag}\n  </head>')
+            notice = f'<p class="project-redirect-notice">Redirecting to <a href="{escape(redirect_url, quote=True)}">{escape(redirect_url)}</a>…</p>'
+            html = html.replace("<hr />", f'{notice}\n    <hr />', 1)
         # ensure output directory exists
         out_dir = os.path.join(OUTPUT_DIR, PROJECT_HTML_DIR)
         os.makedirs(out_dir, exist_ok=True)
