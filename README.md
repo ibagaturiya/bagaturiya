@@ -152,3 +152,7 @@ with `Control-C` in the terminal.
 `archive/legacy-styles/` contains unused historical CSS. It is not referenced by
 the live website. Keep new archival material out of the root and active project
 folders.
+
+## License
+
+All rights reserved. See [LICENSE](LICENSE). Projects that live in their own repositories (e.g. gaussian_exhibition) are licensed separately.

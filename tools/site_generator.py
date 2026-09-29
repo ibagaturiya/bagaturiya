@@ -36,7 +36,7 @@ copyright = '''
     pointer-events: none;
   "
 >
-  created by Ivan Bagaturiya &mdash;
+  &copy; Ivan Bagaturiya, all rights reserved &mdash;
   <script>
     document.write(document.lastModified);
   </script>
