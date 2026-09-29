@@ -1,0 +1,1 @@
+Virtual exhibition — drop gaussian splats, point clouds and meshes into the browser and walk through them as an exhibition.
