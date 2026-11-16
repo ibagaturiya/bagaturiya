@@ -1,0 +1,1 @@
+GIF maker in the browser: drop images or a video, arrange the frames, place them into a PNG or PDF layout and export an animated GIF under 15 MB, encoded locally by its own encoder.
