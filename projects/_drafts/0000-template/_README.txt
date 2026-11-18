@@ -11,6 +11,7 @@ HASHTAGS
 		#architecture
 		#tech
 		#art
+		#teaching
 		#music
 
 ICON

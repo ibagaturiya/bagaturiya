@@ -1,1 +1,12 @@
-Rhino 8 plugin for quick box mapping of textures on beams: the mapping box aligns to each object, then SetMap, ScaleMap, RotateMap and RandomizeMap place, size, turn and vary the texture.
+Set of tools for quick texture mapping of beams. Set, scale, orient and randomize texture mapping in a couple of seconds.
+
+SetMap – automatically applies box texture mapping aligned to the longest edge of a face-oriented bounding box, so textures follow the main direction of beam-like geometry.
+RotMap – rotates the existing box texture mapping of selected objects by 90° to its direction.
+ScaleMap – sets a new box texture scale, showing the current scale relative to 1.0 before applying it.
+RandomizeMap – randomizes the origin of the texture.
+
+Designed to work primarily with cuboid breps, or complex but directional breps; also works on planar surfaces. Since 0.8.13 it also works on parallelepipeds: find the biggest face, take its longest curve, align a frame to it, then map with the aligned bounding box.
+
+If nothing happens, check Properties > Texture Mapping for the "Click here to fix this automatically" button.
+
+BeamBoxMap 0.8.13 · Rhino 8 Mac and Windows · MIT license · free on Food4Rhino

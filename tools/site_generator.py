@@ -261,6 +261,7 @@ def generate_index_html(projects):
       <button class="filter-btn" data-filter="#architecture">#ARCHITECTURE</button>
       <button class="filter-btn" data-filter="#tech">#TECH</button>
       <button class="filter-btn" data-filter="#art">#ART</button>
+      <button class="filter-btn" data-filter="#teaching">#TEACHING</button>
       <button class="filter-btn" data-action="toggle">#FUN</button>
     </div>
     '''

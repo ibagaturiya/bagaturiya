@@ -73,8 +73,8 @@ grid card, icon, and prev/next navigation like any other project.
 1. Copy `projects/_template/` to a new folder such as
    `projects/0062-housing-tool/`.
 2. Replace its text and media.
-3. Add hashtags such as `#selected`, `#architecture`, `#tech`, `#art`, or
-   `#music`.
+3. Add hashtags such as `#selected`, `#architecture`, `#tech`, `#art`,
+   `#teaching`, or `#music`.
 4. List the portfolio skill chips in `skill.txt`, for example
    `#rhino #grasshopper #parametric-design`.
 5. Generate the site:
