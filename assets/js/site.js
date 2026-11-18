@@ -157,6 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.classList.add("active");
         applyFilter(btn.dataset.filter.toLowerCase());
       } else {
+        btn.classList.remove("active");
         applyFilter(null);
       }
     });
