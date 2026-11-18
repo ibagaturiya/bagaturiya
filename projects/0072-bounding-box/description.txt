@@ -1,0 +1,1 @@
+Bounding Box: schnelle Strategien zur räumlichen Verteilung. A Grasshopper tutorial for Studio Foundations on node structure, the geometry pipeline, bounding boxes and arrays.

@@ -1,0 +1,1 @@
+iOS capture app for the lighting-design pipeline: sharp high-resolution photos with exact ARKit pose, LiDAR depth and confidence, the ARKit mesh and QR markers for scale and project origin.

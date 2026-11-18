@@ -1,0 +1,1 @@
+Rhino 8 plugin for quick box mapping of textures on beams: the mapping box aligns to each object, then SetMap, ScaleMap, RotateMap and RandomizeMap place, size, turn and vary the texture.

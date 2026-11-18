@@ -1,0 +1,1 @@
+DaVinci Resolve script for macOS that separates speech into a VOICE track and everything else into a NON-VOICE track.

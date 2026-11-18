@@ -1,0 +1,1 @@
+Finder Quick Action that transcribes or translates audio and video files locally with whisper.cpp, no upload, no cloud.

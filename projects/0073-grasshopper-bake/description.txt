@@ -1,0 +1,1 @@
+„Intelligente“ GH-Workflows II: Cache: Bake automatisieren. A Grasshopper tutorial for Studio Foundations on baking objects with info, onto layers, and push pull.
