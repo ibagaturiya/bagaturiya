@@ -54,6 +54,11 @@ a:focus-visible, button:focus-visible {
   pointer-events: none;
 }
 
+/* embedded videos (e.g. YouTube) often have light thumbnails: darken more so the white title stays readable */
+.project-hero:has(iframe)::after {
+  background: linear-gradient(180deg, rgba(0,0,0,.72), rgba(0,0,0,.35) 40%, rgba(0,0,0,.2) 60%, rgba(0,0,0,.78));
+}
+
 .project-hero iframe,
 .project-hero video,
 .project-hero .project-trailer {
